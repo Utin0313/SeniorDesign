@@ -42,7 +42,7 @@ def generate_brightness_mask(image_path, brightness_min, brightness_max,
 # ---------------------------------------------------------
 def process_dataset(
     data_root="Data",
-    out_root="Data_Test",
+    out_root="data_masked",
     brightness_min=0,
     brightness_max=120,
     dot_saturation_min=80,         
