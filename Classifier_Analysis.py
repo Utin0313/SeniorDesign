@@ -7,14 +7,13 @@ from sklearn.metrics import confusion_matrix
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 # PARAMETERS. 
-INPUT_DIR = "Data_Resized_Clean" 
+INPUT_DIR = "Data_new_final" 
 NUM_CLASSES = 4 
-CLASS_NAMES = ["Prostate", "Skin", "Breast", "Control"]
 BATCH_SIZE = 32 
 IMG_SIZE = (224, 224) 
 
 # Load the model that we created.  
-model = tf.keras.models.load_model("resnet50_cancer_classifier.keras") 
+model = tf.keras.models.load_model("resnet50_simple_classifier.keras") 
 
 # Rebuild test generator. 
 val_test_datagen = ImageDataGenerator(preprocessing_function=tf.keras.applications.resnet50.preprocess_input)
@@ -24,6 +23,8 @@ test_generator = val_test_datagen.flow_from_directory(directory=os.path.join(INP
                                                       class_mode="categorical", 
                                                       shuffle=False)
 
+CLASS_NAMES = list(test_generator.class_indices.keys()) # USE THE CLASS (ORDER IN ALPHABETICAL ORDER IN THE MODEL)
+print(test_generator.class_indices)
 
 def plot_confusion_matrix(cm, classes, 
                           normalize=False,
@@ -79,5 +80,4 @@ else:
     plt.axis("off")
     plt.savefig("Misclassified_Example", dpi=150, bbox_inches="tight"); plt.close()
 
-import os
 
