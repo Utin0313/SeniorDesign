@@ -16,8 +16,8 @@ def get_crop_coords(x, y, w, h, x_pixel=4056, y_pixel=3040):
 # Process dataset (NO augmentation here)
 # ---------------------------------------------------------
 def process_dataset(
-    input_root=Path("Data_new_test"),
-    output_root=Path("Data_clean"),
+    input_root=Path("data_masked"),
+    output_root=Path("data_processed"),
     target_size=(224, 224)
 ):
     x1, x2, y1, y2 = get_crop_coords(1740, 1032, 402, 762)
