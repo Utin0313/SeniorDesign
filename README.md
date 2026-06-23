@@ -49,7 +49,7 @@ The system combines hardware and machine learning components:
 4. Classification of test results (e.g., positive / negative)  
 5. Output display and decision support  
 
-<img width="2837" height="2058" alt="architecture" src="https://github.com/user-attachments/assets/2d6e2b94-8f18-4217-83e7-2314256bf6ee" />
+<img width="936" height="673" alt="Screenshot 2026-06-23 025733" src="https://github.com/user-attachments/assets/2af0c776-bbab-4fc8-965e-e088630c3976" />
 
 ---
 
