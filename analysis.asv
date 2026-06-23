@@ -1,7 +1,0 @@
-clc; clear; close all
-
-% -- Load data --
-data = readtable('prediction_n18.csv'); 
-classes = ['breast', 'control', 'prostate', 'skin']; 
-
-% -- 
