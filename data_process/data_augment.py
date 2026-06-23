@@ -25,8 +25,8 @@ def add_black_noise_to_image(img: Image.Image, noise_ratio=0.05):
 # Process dataset
 # ---------------------------------------------------------
 def process_dataset(
-    input_root=Path("Data_new_preproc"),
-    output_root=Path("Data_new_final"),
+    input_root=Path("data_processed"),
+    output_root=Path("data_final"),
     noise_ratio=0.05
 ):
 
@@ -109,7 +109,7 @@ def process_dataset(
 if __name__ == "__main__":
 
     process_dataset(
-        input_root=Path("data_procssed"),
+        input_root=Path("data_processed"),
         output_root=Path("data_final"),
         noise_ratio=0.05
     )
